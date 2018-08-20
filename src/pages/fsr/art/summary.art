@@ -1,0 +1,12 @@
+<div id="summary" class="content">
+    <div class="top">
+        <span class="up"></span>
+        <span class="down"></span>
+        <p>{{title}}</p>
+    </div>
+    <div class="box">
+        <div class='container'>
+            {{@ remark}}
+        </div>
+    </div>
+</div>

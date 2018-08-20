@@ -1,0 +1,6 @@
+<div class="page all" id="all">
+    <div class="footer">单位名称：辅仁淑凡演示</div>
+    <div class='container'>
+        {{@ $data.join('')}}
+    </div>
+</div>

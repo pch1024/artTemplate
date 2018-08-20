@@ -1,0 +1,40 @@
+<div id="intelligence" class="content">
+    <div class="top">
+        <span class="up"></span>
+        <span class="down"></span>
+        <p>{{title}}</p>
+    </div>
+    <div class="box">
+        <p>{{section1.name}}</p>
+        <table class="table">
+            <tr>
+                {{each section1.row1}}
+                <th style="color:#44870F">{{$value}}</th>
+                {{/each}}
+            </tr>
+            <tr style="border-style: dashed">
+                {{each section1.row2}}
+                <td>{{$value}}</td>
+                {{/each}}
+            </tr>
+            <tr style="border-style: dashed">
+                {{each section1.row3}}
+                <td>{{$value}}</td>
+                {{/each}}
+            </tr>
+            <tr style="border-style: dashed">
+                {{each section1.row4}}
+                <td>{{$value}}</td>
+                {{/each}}
+            </tr>
+        </table>
+        <div class="tip">表1 {{section1.name}}</div>
+        <!-- <p>{{section2.name}}</p> -->
+        <div class="">
+            <img style="mix-blend-mode: multiply;" src="{{section2.img}}" alt="{{section2.name}}">
+        </div>
+        <div class="tip">图1 {{section2.name}}</div>
+        <p>{{section3.name}}</p>
+        <div class="comment"> {{section3.comment}} </div>
+    </div>
+</div>

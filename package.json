@@ -1,0 +1,47 @@
+{
+  "name": "newreport",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "art-template": "^4.12.2",
+    "axios": "^0.18.0",
+    "echarts": "^4.1.0",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "art-template-loader": "^1.4.3",
+    "autoprefixer": "^9.1.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-inline-source-plugin": "0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.3",
+    "postcss-js": "^2.0.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-scss": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "shelljs": "^0.8.2",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "scripts": {
+    "build": "cross-env NODE_ENV=pro webpack --hide-modules",
+    "dev": "cross-env NODE_ENV=dev webpack-dev-server  --progress --hide-modules"
+  },
+  "author": "pch",
+  "license": "ISC"
+}

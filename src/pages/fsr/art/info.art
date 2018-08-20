@@ -1,0 +1,17 @@
+<div id="info" class="content">
+    <div class="top">
+        <span class="up"></span>
+        <span class="down"></span>
+        <p>{{title}}</p>
+    </div>
+    <div class="box">
+        <div class='container'>
+            <p class="all">编号：{{id}}</p>
+            <p class="half">姓&nbsp;&nbsp;名：&nbsp;&nbsp;{{name}}</p>
+            <p class="half">出生日期：&nbsp;&nbsp;{{birthday}}</p>
+            <p class="half">年&nbsp;&nbsp;龄：&nbsp;&nbsp;{{age}}</p>
+            <p class="half">测试日期：&nbsp;&nbsp;{{testday}}</p>
+            <p class="half">性&nbsp;&nbsp;别：&nbsp;&nbsp;{{sex}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+<div id="img" class="content">
+    <div class="top">
+        <span class="up"></span>
+        <span class="down"></span>
+        <p>{{title}}</p>
+    </div>
+    <div class="box">
+        <img src="{{img}}" alt="房树人画作">
+    </div>
+</div>
