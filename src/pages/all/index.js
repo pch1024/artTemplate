@@ -1,4 +1,5 @@
-// import echarts from 'echarts'
+// // import echarts from 'echarts'
+// import "babel-polyfill";
 import axios from 'axios'
 
 import {
