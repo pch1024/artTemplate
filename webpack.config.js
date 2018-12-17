@@ -5,11 +5,12 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const pages = {
+  index:['babel-polyfill','./src/pages/index/index.js'],
   fsr: ['babel-polyfill', './src/pages/fsr/index.js'],
   one: ['babel-polyfill', './src/pages/one/index.js'],
   all: ['babel-polyfill', './src/pages/all/index.js']
 };
-const INDEX = 'all.html';
+const INDEX = 'index.html';
 
 const plugins = [];
 for (var key in pages) {
@@ -46,7 +47,7 @@ module.exports = {
           fallback: 'style-loader',
           //resolve-url-loader may be chained before sass-loader if necessary
           use: ['css-loader', 'postcss-loader', 'sass-loader'],
-          publicPath: '../'
+          publicPath: '../../'
         })
       },
       {
@@ -59,7 +60,7 @@ module.exports = {
         loader: 'file-loader',
         include: /src/,
         options: {
-          publicPath: './assets/',
+          // publicPath: './assets/',
           outputPath: 'assets',
           limit: 10000,
           name: '[name].[ext]?[hash]' // 源文件
@@ -88,7 +89,7 @@ module.exports = {
     index: INDEX,
     inline: true,
     hot: true,
-    host: '192.168.1.165',
+    host: '192.168.1.166',
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
     port: 9000
@@ -104,7 +105,7 @@ if (process.env.NODE_ENV === 'pro') {
       new ExtractTextPlugin('[name]/[name].css'),
       new CopyWebpackPlugin([{
         from: 'src/static/',
-        to: 'assets/'
+        to: 'assets/',
       }])
     ],
     plugins
@@ -120,7 +121,8 @@ if (process.env.NODE_ENV === 'dev') {
       new ExtractTextPlugin('[name]/[name].css'),
       new CopyWebpackPlugin([{
         from: 'src/static/',
-        to: 'assets/'
+        to: 'assets/',
+        publicPath:'../../'
       }])
     ],
     plugins

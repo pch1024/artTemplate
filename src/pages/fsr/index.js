@@ -1,12 +1,10 @@
 // import echarts from 'echarts'
 import axios from 'axios'
-
 import {
     domToString
 } from '../../assets/lib/lib'
 import json from '../../assets/data/fsr.json'
 import '../../assets/css/reset.css'
-
 import './index.scss'
 
 import analysis from './art/analysis.art'
@@ -19,10 +17,8 @@ import page2 from './art/page2.art'
 import QA from './art/QA.art'
 import summary from './art/summary.art'
 
-
-console.log(echarts)
-
-axios.get('https://api.github.com')
+// console.log(echarts)
+axios.get('https://api.github.com/users?'+Math.random())
     .then(function (response) {
         console.log(response);
         console.log(json);
