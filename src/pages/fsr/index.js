@@ -152,6 +152,22 @@ function htmlRender(obj) {
         var divH = 900,
             _index = 0,
             boxChildren = [];
+        function loop(arr) {
+            document.getElementById('app').innerHTML += page2([arr, eid]);
+            var p2 = document.querySelector('.page2:last-child .container:last-child');
+            var _index = 0
+            if (p2.offsetHeight > divH) {
+                p2.innerHTML = ''
+                arr.forEach(function (node, index) {
+                    if (p2.offsetHeight < divH) {
+                        p2.innerHTML += node
+                        _index = index
+                    }
+                })
+                p2.innerHTML = arr.slice(0, _index).join('') // 填入正确的数据
+                loop(arr.slice(_index, arr.length));
+            }
+        }
         if (box.offsetHeight > divH) {
             Array.prototype.forEach.call(box.children, function (node) {
                 boxChildren.push(domToString(node))
@@ -169,23 +185,6 @@ function htmlRender(obj) {
             var newArr = boxChildren.slice(_index - 1, boxChildren.length);
 
             loop(newArr)
-
-            function loop(arr) {
-                document.getElementById('app').innerHTML += page2([arr, eid]);
-                var p2 = document.querySelector('.page2:last-child .container:last-child');
-                var _index = 0
-                if (p2.offsetHeight > divH) {
-                    p2.innerHTML = ''
-                    arr.forEach(function (node, index) {
-                        if (p2.offsetHeight < divH) {
-                            p2.innerHTML += node
-                            _index = index
-                        }
-                    })
-                    p2.innerHTML = arr.slice(0, _index).join('') // 填入正确的数据
-                    loop(arr.slice(_index, arr.length));
-                }
-            }
         }
     }
 
